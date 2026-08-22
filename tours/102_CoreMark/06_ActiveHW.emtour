@@ -121,10 +121,6 @@ steps:
       💡&thinsp;You've possibly selected the wrong **Port**.<br>
       ❓&thinsp;Ask for help on the [Discussions](https://github.com/em-foundation/emporium/discussions) page.
 
-      </div>
-
-
-
   - cmds:
       - open 1
       - mark 1 C 29
