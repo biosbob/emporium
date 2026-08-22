@@ -3,6 +3,8 @@ title: SleepyRunnerP on Hardware
 files:
   - em.prog:em.benchmark.coremark/SleepyRunnerP.em.ts
   - .assets/img-101-01-01.png
+  - .assets/img-102-08-01.png
+
 
 steps:
   - cmds:
@@ -23,8 +25,25 @@ steps:
       But without **PulseView**, you'll miss out on lots of details&thinsp;&hellip;
 
   - cmds:
+      - view 3
     text: |
-      {[ht,monitor_heart]&thinsp;Introducing Saleae}
+      {[ht,monitor_heart]&thinsp;A Real Hardware Logic Analyzer}
+
+      Good news&thinsp;&hellip;&thinsp; You can purchase a real logic analyzer for less than many of these inexpensive development boards.
+
+      <div class="em-info">
+
+      [Sparkfun](https://www.sparkfun.com/usb-logic-analyzer-24mhz-8-channel.html) &ndash; at major distributors.&thinsp; Search *"8-channel, 24MHz USB logic analyzer"* for this (and other) products.
+
+      </div>
+
+      Using the jumper wires, connect the analyzer to the cor&shy;res&shy;ponding (color-coded) pins on your board of choice.
+
+      After some **PulseView** setup, you'll see the same [`AppOut`, `DbgA`, &thinsp;&hellip; `SysLed`] signals captured from *real* hardware.
+
+  - cmds:
+    text: |
+      {[ht,settings]&thinsp;Configuring PulseView}
 
   - cmds:
     text: |
