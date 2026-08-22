@@ -5,6 +5,7 @@ files:
   - .assets/img-101-01-01.png
   - .assets/img-102-08-01.png
   - .assets/img-102-08-02.png
+  - .assets/img-102-08-03.png
 
 
 steps:
@@ -71,8 +72,29 @@ steps:
 
       ❓&thinsp;Visit **EM&bull;porium** [Discussions](https://github.com/em-foundation/emporium/discussions) for help with **PV**.
 
+  - cmds:
+      - view 5
+    text: |
+      {[ht,cycle]&thinsp;Steady-State Workflow}
+
+      Once you can reliably (re-)launch **PulseView**, your work&shy;flow falls into a regular **edit**&thinsp;&middot;&thinsp;**execute**&thinsp;&middot;&thinsp;**examine** pattern.
+
+      💡&thinsp;Save some setup time by never exiting **PulseView**.
+
+      After choosing a board {[dc,1]}, **Build**&thinsp;+&thinsp;**Load** {[dc,2]} programs of in&shy;terest.&thinsp; You'll see visual evidence of execution on HW {[dc,3]}.
+
+      Hopping into **PulseView**, you'll toggle the **Run** button into its **Stop** mode &ndash; awaiting `DbgtA` to trigger the capture.
+
+      <div class="em-info">
+
+      If the **Stop** button shows RED {[dc,4]}, you should **RESET** the board {[dc,3]}; the **Stop** button should turn GREEN {[dc,5]}.
+
+      </div>
+
+      A live capture then unfolds inside **PulseView** &ndash; term&shy;inated by **Stop** or else when exceeding the allotted sample-count.
 
   - cmds:
+      - open 1
     text: |
       {[ht,$extra]&thinsp;Extra Credit}
 
