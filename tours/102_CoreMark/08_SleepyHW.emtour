@@ -4,6 +4,7 @@ files:
   - em.prog:em.benchmark.coremark/SleepyRunnerP.em.ts
   - .assets/img-101-01-01.png
   - .assets/img-102-08-01.png
+  - .assets/img-102-08-02.png
 
 
 steps:
@@ -42,8 +43,18 @@ steps:
       After some **PulseView** setup, you'll see the same [`AppOut`, `DbgA`, &thinsp;&hellip; `SysLed`] signals captured from *real* hardware.
 
   - cmds:
+      - view 4
     text: |
       {[ht,settings]&thinsp;Configuring PulseView}
+
+      {[DC,1]}<br>
+      {[DC,2]}<br>
+      {[DC,3]}<br>
+      {[DC,4]}<br>
+      {[DC,5]}<br>
+      {[DC,6]}<br>
+      {[DC,7]}<br>
+      {[DC,8]}<br>
 
   - cmds:
     text: |
