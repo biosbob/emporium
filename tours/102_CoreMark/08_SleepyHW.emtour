@@ -30,7 +30,7 @@ steps:
     text: |
       {[ht,monitor_heart]&thinsp;A Real Hardware Logic Analyzer}
 
-      Good news&thinsp;&hellip;&thinsp; You can purchase a real logic analyzer for less than many of these inexpensive development boards.
+      Good news&thinsp;&hellip;&thinsp; You can purchase a USB logic analyzer for less than many of these inexpensive development boards.
 
       <div class="em-info">
 
@@ -38,23 +38,39 @@ steps:
 
       </div>
 
-      Using the jumper wires, connect the analyzer to the cor&shy;res&shy;ponding (color-coded) pins on your board of choice.
-
       After some **PulseView** setup, you'll see the same [`AppOut`, `DbgA`, &thinsp;&hellip; `SysLed`] signals captured from *real* hardware.
+
+      In preparation, review this checklist:
+
+      ☑️&thinsp; **build&thinsp;+&thinsp;load** {[cu]BlinkerP} your board of choice<br>
+      ☑️&thinsp; visually verify that {[cu]BlinkerP} executes on your board<br>
+      ☑️&thinsp; connect the jumper wires to your board's colored pins<br>
+      ☑️&thinsp; also connect analyzer GND to board GND [grey]<br>
+      ☑️&thinsp; plug the USB logic analyzer into your host PC
+
+
 
   - cmds:
       - view 4
     text: |
       {[ht,settings]&thinsp;Configuring PulseView}
 
-      {[DC,1]}<br>
-      {[DC,2]}<br>
-      {[DC,3]}<br>
-      {[DC,4]}<br>
-      {[DC,5]}<br>
-      {[DC,6]}<br>
-      {[DC,7]}<br>
-      {[DC,8]}<br>
+      After prepping your board and logic analyzer, configure **PulseView** [**PV**] following the steps highlighted below:
+
+      {[DC,1]}&thinsp; click the **Create New Session** button at the top-left<br>
+      {[DC,2]}&thinsp; click the <b>&lt;No Device&gt;</b> menu in the new tab<br>
+      {[DC,3]}&thinsp; choose the **fx2lafw** driver from the dropdown<br>
+      {[DC,4]}&thinsp; click **Scan** to search and **Ok** to accept the result<br>
+      {[DC,5]}&thinsp; change count to **100 M samples** and rate to **4 MHz**<br>
+      {[DC,6]}&thinsp; restore `saleae.pvs` from your `emporium` folder<br>
+      {[DC,7]}&thinsp; set a falling-edge trigger on the `DbgA` signal<br>
+      {[DC,8]}&thinsp; click the **Run**&thinsp;&middot;&thinsp;**Stop** button to control the capture<br>
+
+      💡&thinsp;When restarting **PV**, all of its state will not persist.<br>
+      💡&thinsp;Always check these steps &ndash; adjusting **PV** as needed.
+
+      ❓&thinsp;Visit **EM&bull;porium** [Discussions](https://github.com/em-foundation/emporium/discussions) for help with **PV**.
+
 
   - cmds:
     text: |
