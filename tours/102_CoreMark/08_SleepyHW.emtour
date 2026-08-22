@@ -110,4 +110,16 @@ steps:
     text: |
       {[ht,$steps]&thinsp;Next Steps}
 
+      This stop formally ends the **CoreMark** tours &ndash; which have taken you from {[cu]ActiveRunnerP} to {[cu]SleepyRunnerP}.
+
+      <div class="em-info">
+
+      These tours have also taken you from a **Pi Pico** simulator to a choice of real HW platforms for program execution.
+
+      </div>
+
+      Equally important, inexpensive logic analyzers enable our use of **PulseView** for RTA &thinsp;{[tr,101/01/03]}&thinsp; to continue unabated.
+
+      "RTA on real HW" will play a critical role going for&shy;ward &ndash; as future tours tackle porting and benchmarking **EMS**.
+
       {[hc]}
